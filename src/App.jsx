@@ -11,7 +11,7 @@ import UiUxDesign from './components/UiUxDesign.jsx';
 import ContactCta from './components/ContactCta.jsx';
 import WebExperience from './components/WebExperience.jsx';
 import Development from './components/Development.jsx';
-import Skills from './components/Skills.jsx';
+
 
 
 function FullLandingPage() {
