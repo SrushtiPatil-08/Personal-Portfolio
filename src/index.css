@@ -1,103 +1,63 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+/* ==========================================
+   📱 Portfolio Mobile Fluid System
+   ========================================== */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Inter", sans-serif;
-  background: #f6f7fb;
-  color: #0f172a;
-  overflow-x: hidden; /* Prevents layout items from sticking out horizontally */
-  width: 100%;
-}
-
-html {
-  scroll-behavior: smooth;
-  width: 100%;
-  overflow-x: hidden;
-}
-
-h1, h2, h3 {
-  letter-spacing: -0.03em;
-}
-
-p {
-  line-height: 1.6;
-  color: #64748b;
-}
-
-/* ==========================================================================
-   📱 SYSTEM-WIDE MOBILE RESPONSIVE OVERRIDES
-   ========================================================================== */
-
+/* This targets screens smaller than 900px (Tablets and Phones) */
 @media (max-width: 900px) {
   
-  /* 1. FORCE FLEX LAYOUTS TO STACK VERTICALLY */
-  /* This cleans up the Navbar layout and prevents structural overlap */
-  div[style*="display: flex"],
-  div[style*="display: 'flex'"],
-  nav[style*="display: flex"],
-  footer[style*="display: flex"] {
+  /* Navbar Container Overhaul */
+  .responsive-nav {
     flex-direction: column !important;
+    gap: 16px !important;
+    padding: 15px !important;
+    width: 100% !important;
     align-items: center !important;
+  }
+  
+  /* Link Capsule Grouping */
+  .responsive-menu {
+    flex-direction: row !important; /* Forces Home, About, Services, Works to stay side-by-side */
+    flex-wrap: wrap !important;
     justify-content: center !important;
+    gap: 12px !important;
+    width: 100% !important;
+    padding: 8px 16px !important;
+    border-radius: 20px !important;
+  }
+
+  /* Main Viewport Container Constraints */
+  .responsive-container-main {
+    padding: 100px 12px 30px 12px !important; /* Prevents text from slamming hard against phone bezels */
+    gap: 40px !important;
+  }
+
+  /* Hero & Image Structuring (CONSOLIDATED) */
+  .responsive-hero-grid {
+    display: flex !important;
+    flex-direction: column !important; /* Gracefully stacks your intro text and portrait wrapper */
+    gap: 24px !important;
     text-align: center !important;
+    padding: 24px 16px !important;
+    border-radius: 24px !important;
+  }
+
+  /* Profile Picture Control */
+  .responsive-profile-wrapper {
+    width: 100% !important;
+    max-width: 280px !important; /* Perfectly balances your frame without overflowing */
+    margin: 0 auto !important;
+  }
+
+  /* Structural Cards (Services Grid, Selected Works Grid) */
+  .responsive-grid-cards {
+    grid-template-columns: 1fr !important; /* Forces cards into an elegant stacked configuration */
     gap: 20px !important;
-    width: 100% !important;
-    padding: 10px !important;
+    padding: 0 10px !important;
   }
 
-  /* Keep badge rows or horizontal tags wrapping nicely instead of dropping into columns */
-  div[style*="flex-wrap: wrap"],
-  div[style*="gap: 10px"],
-  div[style*="gap: 24px"] {
-    flex-direction: row !important;
-    justify-content: center !important;
-  }
-
-  /* 2. RESTRUCTURE THE STICKY EXPERIENCE GRID TO ONE COLUMN */
-  div[style*="display: grid"],
-  div[style*="display: 'grid'"] {
-    grid-template-columns: 1fr !important; /* Forces layout to fall cleanly into 1 vertical column */
-    gap: 30px !important;
-    width: 100% !important;
-  }
-
-  /* Unpin your sticky column sidebar headers on mobile devices */
-  div[style*="position: sticky"],
-  div[style*="position: 'sticky'"] {
-    position: relative !important;
-    top: 0 !important;
-    align-items: center !important;
-    text-align: center !important;
-  }
-
-  /* 3. FLUID TYPOGRAPHY SCALING */
-  /* Downscale the big headline typography elements so they don't break outside card components */
-  h1, div[style*="fontSize: '56px'"], h2[style*="fontSize: '56px'"] {
-    font-size: 34px !important;
+  /* Adjust typography headers globally on mobile devices */
+  .fluid-title {
+    font-size: 32px !important;
     line-height: 1.2 !important;
-  }
-
-  div[style*="fontSize: '140px'"], div[style*="font-size: 140px"] {
-    font-size: 54px !important;
-    top: 10px !important;
-  }
-
-  /* 4. FIX COMPONENT CARD FRAMES & HERO BACKGROUNDS */
-  section, div[style*="maxWidth: '1200px'"] {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 20px 15px !important; /* Adds standard safety padding inside the phone edges */
-    border-radius: 20px !important; /* Smooths down extreme corners on phone aspect ratios */
-  }
-
-  /* Adjust profile frame image masks to sit cleanly inside layouts */
-  div[style*="clipPath"], img[style*="clipPath"] {
-    max-width: 100% !important;
-    height: auto !important;
   }
 }
