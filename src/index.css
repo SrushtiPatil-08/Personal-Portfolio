@@ -10,10 +10,8 @@ body {
   font-family: "Inter", sans-serif;
   background: #f6f7fb;
   color: #0f172a;
-  /* CRITICAL: Prevents your page elements from pushing the phone viewport sideways */
-  overflow-x: hidden; 
+  overflow-x: hidden; /* Prevents layout items from sticking out horizontally */
   width: 100%;
-  -webkit-font-smoothing: antialiased;
 }
 
 html {
@@ -22,74 +20,84 @@ html {
   overflow-x: hidden;
 }
 
-/* Premium typography baseline with fluid scaling */
 h1, h2, h3 {
   letter-spacing: -0.03em;
-  line-height: 1.15;
 }
 
 p {
   line-height: 1.6;
   color: #64748b;
-  font-size: 1rem;
 }
 
 /* ==========================================================================
-   ⚡ MOBILE & TABLET RESPONSIVENESS OVERRIDES (Media Queries)
+   📱 SYSTEM-WIDE MOBILE RESPONSIVE OVERRIDES
    ========================================================================== */
 
-/* Target Mobile Devices & Tablets (Screens smaller than 1024px) */
-@media (max-width: 1024px) {
-  /* 1. Force all Grid system components into a single column structure */
-  div[style*="display: grid"],
-  section[style*="display: grid"] {
-    grid-template-columns: 1fr !important;
-    gap: 32px !important;
-  }
-
-  /* 2. Overhaul flex sections to drop down vertically instead of squeezing horizontally */
+@media (max-width: 900px) {
+  
+  /* 1. FORCE FLEX LAYOUTS TO STACK VERTICALLY */
+  /* This cleans up the Navbar layout and prevents structural overlap */
   div[style*="display: flex"],
+  div[style*="display: 'flex'"],
   nav[style*="display: flex"],
   footer[style*="display: flex"] {
     flex-direction: column !important;
     align-items: center !important;
+    justify-content: center !important;
     text-align: center !important;
-    gap: 24px !important;
+    gap: 20px !important;
+    width: 100% !important;
+    padding: 10px !important;
   }
 
-  /* Exceptions for mini tag clusters or inline small button fields */
+  /* Keep badge rows or horizontal tags wrapping nicely instead of dropping into columns */
   div[style*="flex-wrap: wrap"],
-  div[style*="gap: 10px"] {
+  div[style*="gap: 10px"],
+  div[style*="gap: 24px"] {
     flex-direction: row !important;
     justify-content: center !important;
   }
 
-  /* 3. Handle sticky columns (like your Experience sidebar) so they unfreeze nicely on phones */
+  /* 2. RESTRUCTURE THE STICKY EXPERIENCE GRID TO ONE COLUMN */
+  div[style*="display: grid"],
+  div[style*="display: 'grid'"] {
+    grid-template-columns: 1fr !important; /* Forces layout to fall cleanly into 1 vertical column */
+    gap: 30px !important;
+    width: 100% !important;
+  }
+
+  /* Unpin your sticky column sidebar headers on mobile devices */
   div[style*="position: sticky"],
   div[style*="position: 'sticky'"] {
     position: relative !important;
     top: 0 !important;
-    margin-bottom: 20px !important;
     align-items: center !important;
+    text-align: center !important;
   }
 
-  /* 4. Downscale enormous background typography elements so they fit phone dimensions */
-  div[style*="fontSize: '140px'"],
-  div[style*="font-size: 140px"] {
-    font-size: 64px !important;
-    top: 5% !important;
+  /* 3. FLUID TYPOGRAPHY SCALING */
+  /* Downscale the big headline typography elements so they don't break outside card components */
+  h1, div[style*="fontSize: '56px'"], h2[style*="fontSize: '56px'"] {
+    font-size: 34px !important;
+    line-height: 1.2 !important;
   }
-}
 
-/* Target Small Phones (Screens smaller than 480px) */
-@media (max-width: 480px) {
-  /* Scale down headers to optimize screen real estate */
-  h1 { font-size: 32px !important; }
-  h2 { font-size: 28px !important; }
-  
-  /* Pull in component outer padding so your layout hits the edge safely */
-  section, div {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+  div[style*="fontSize: '140px'"], div[style*="font-size: 140px"] {
+    font-size: 54px !important;
+    top: 10px !important;
+  }
+
+  /* 4. FIX COMPONENT CARD FRAMES & HERO BACKGROUNDS */
+  section, div[style*="maxWidth: '1200px'"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 20px 15px !important; /* Adds standard safety padding inside the phone edges */
+    border-radius: 20px !important; /* Smooths down extreme corners on phone aspect ratios */
+  }
+
+  /* Adjust profile frame image masks to sit cleanly inside layouts */
+  div[style*="clipPath"], img[style*="clipPath"] {
+    max-width: 100% !important;
+    height: auto !important;
   }
 }
