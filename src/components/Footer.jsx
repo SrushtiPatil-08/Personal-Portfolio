@@ -10,6 +10,8 @@ export default function Footer() {
             <a href="https://github.com/SrushtiPatil-08" style={styles.link}>Github</a>
             <a href="https://www.linkedin.com/in/srushti-patil-126a03419/" style={styles.link}>LinkedIn</a>
             <a href="#twitter" style={styles.link}>Twitter</a>
+            {/* Added contact number as a clickable tel link */}
+            <a href="tel:+917798967379" style={styles.link}>+91 77989 67379</a>
           </div>
         </div>
       </div>
@@ -19,15 +21,15 @@ export default function Footer() {
 
 const styles = {
   footer: { 
-    width: '100%',                // Fills up the entire available width safely
-    backgroundColor: '#000000',   // Pure solid black
-    padding: '40px 0',            // Vertical breathing room
+    width: '100%',
+    backgroundColor: '#000000',
+    padding: '40px 0',
     boxSizing: 'border-box',
     marginTop: '60px'
   },
   contentContainer: {
     width: '100%',
-    maxWidth: '1200px',           // Aligns beautifully with your grids
+    maxWidth: '1200px',
     margin: '0 auto',
     padding: '0 40px',
     boxSizing: 'border-box'
