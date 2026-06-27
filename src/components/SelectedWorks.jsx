@@ -18,7 +18,7 @@ export default function SelectedWorks() {
       title: 'Lumiere Store Website', 
       platform: 'Responsive Web Design & Complex Layout Grid Implementation', 
       color: '#22c55e', // Added missing comma
-      pathlink: 'https://lumiere-store-sepia.vercel.app/'
+      pathlink: 'https://lumiere-store-rho.vercel.app/'
     }
   ];
 
