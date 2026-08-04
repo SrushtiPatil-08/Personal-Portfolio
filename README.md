@@ -1,39 +1,191 @@
-# Srushti Patil – Personal Portfolio
+# 🌐 Srushti Patil – Personal Portfolio
 
-A sleek, responsive, and performance-optimized personal portfolio built using React and Vite. This application showcases a dual-expertise approach to UI/UX design and frontend web development, tracking the creation of standalone digital platforms from conception to code.
-
-## 🚀 Live Platforms Showcased
-* **PrintOngo Website** – Startup Core Platform
-* **Lumiere Store Website** – Responsive Web Application
+A sleek, responsive, and performance-optimized personal portfolio built using **React** and **Vite**. This portfolio represents my journey as a **Frontend Developer** and **UI/UX Designer**, showcasing projects from concept to deployment with a strong focus on clean design, performance, and user experience.
 
 ---
 
-## 🛠️ Tech Stack & Architecture
+## 🌍 Live Demo
 
-* **Frontend Framework:** React (Functional Components & Hooks)
-* **Build Tool:** Vite (configured with modern fast-refresh architecture)
-* **Styling System:** Modular JavaScript Styles (Inline Style Objects for optimal rendering containment)
-* **Smooth Navigation:** Multi-section programmatic window scrolling with fixed-header offset tracking
+🔗 **Portfolio:** https://personal-portfolio-ruddy-eight-93.vercel.app/
 
 ---
 
-## 📂 Component Directory Map
+# 📸 Portfolio Preview
 
-The codebase follows a modular design system split into specialized presentation grids:
+## 🏠 Home
 
-```text
+![Home](./screenshots/home.png)
+
+---
+
+## 👩‍💻 About
+
+![About](./screenshots/about.png)
+
+---
+
+## 🚀 Selected Works
+
+![Projects](./screenshots/projects.png)
+
+---
+
+
+# ✨ Features
+
+- 🎨 Modern and minimal UI
+- ⚡ Built with React + Vite
+- 📱 Fully responsive across all devices
+- 🧭 Smooth scrolling navigation
+- 🎯 Modular component architecture
+- 💼 Dedicated project showcase
+- 🖌️ UI/UX design section
+- 💻 Frontend development section
+- 📬 Contact section
+- 🚀 Fast loading and optimized performance
+
+---
+
+# 🚀 Featured Platforms
+
+### 🖨️ PrintOngo
+
+A startup platform focused on simplifying printing services through an intuitive and responsive user experience.
+
+### 💡 Lumiere Store
+
+A modern responsive e-commerce website featuring clean layouts and an elegant shopping experience.
+
+---
+
+# 🛠 Tech Stack
+
+| Category | Technologies |
+|----------|--------------|
+| Frontend | React |
+| Build Tool | Vite |
+| Styling | CSS3, Inline Style Objects |
+| JavaScript | ES6+ |
+| Navigation | Smooth Scroll |
+| Deployment | GitHub Pages / Vercel |
+
+---
+
+# 📂 Project Structure
+
+```
 src/
 ├── components/
-│   ├── Navbar.jsx            # Fixed top-overlay menu bar with custom scroll mappings
-│   ├── Hero.jsx              # Main intro viewport card
-│   ├── AboutIntro.jsx        # Core background and discipline overview
-│   ├── SelectedWorks.jsx     # Highlighting PrintOngo & Lumiere Store entries
-│   ├── Experience.jsx        # Structural weekly execution track timeline
-│   ├── UiUxDesign.jsx        # Visual phase layouts grid
-│   ├── BrandIdentity.jsx     # Asset & theme styling segments
-│   ├── WebExperience.jsx     # Responsiveness & user flow modules
-│   ├── Development.jsx       # Component logic & Git deployment configurations
-│   ├── ContactCta.jsx        # Internal interactive engagement drawer
-│   └── Footer.jsx            # Closing system context layout
-├── App.jsx                   # Main coordinator page layout flow
-└── main.jsx                  # DOM insertion entry point
+│   ├── Navbar.jsx
+│   ├── Hero.jsx
+│   ├── AboutIntro.jsx
+│   ├── SelectedWorks.jsx
+│   ├── Experience.jsx
+│   ├── UiUxDesign.jsx
+│   ├── BrandIdentity.jsx
+│   ├── WebExperience.jsx
+│   ├── Development.jsx
+│   ├── ContactCta.jsx
+│   └── Footer.jsx
+│
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+# ⚙️ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/suskizzstack404/Personal-Portfolio.git
+```
+
+Navigate into the project
+
+```bash
+cd Personal-Portfolio
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run the development server
+
+```bash
+npm run dev
+```
+
+Build for production
+
+```bash
+npm run build
+```
+
+Preview the production build
+
+```bash
+npm run preview
+```
+
+---
+
+# 🎯 Design Philosophy
+
+This portfolio was built with the following goals:
+
+- Clean visual hierarchy
+- Performance-first architecture
+- Modular React components
+- Responsive layouts
+- Minimal animations
+- Easy scalability
+- Maintainable codebase
+
+---
+
+# 📈 Performance
+
+- ⚡ Lightning-fast development with Vite
+- 📱 Responsive on desktop, tablet, and mobile
+- 🚀 Optimized React rendering
+- 🎯 Modular component architecture
+- ♿ Accessibility-focused layouts
+
+---
+
+# 📬 Contact
+
+Feel free to connect with me!
+
+- 💼 LinkedIn: https://www.linkedin.com/in/srushti-patil-126a03419/
+- 📧 Email: srushtisarts@gmail.com
+- 🌐 Portfolio: https://personal-portfolio-ruddy-eight-93.vercel.app/
+
+---
+
+# ⭐ Support
+
+If you like this project, consider giving it a **⭐ Star** on GitHub.
+
+It motivates me to keep building and sharing more projects.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+<div align="center">
+
+### Made with ❤️ by Srushti Patil
+
+**Frontend Developer • UI/UX Designer • React Developer**
+
+</div>
